@@ -1,6 +1,6 @@
 import React from "react";
 // import { useNavigate } from "react-router-dom";
-import GenericForm from "../../components/GenericForm";
+import GenericForm from "../../components/generic-form";
 
 type GoalFormProps = {
   mode: "create" | "edit";
