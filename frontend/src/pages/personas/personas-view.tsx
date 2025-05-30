@@ -1,37 +1,20 @@
 import React, { useState } from "react";
-
-const persona = {
-  name: "Technical Support Seeker",
-  id: 2,
-  description:
-    "A user seeking technical support for computer issues. They typically have limited technical knowledge and are looking for clear, step-by-step guidance to resolve their problems.",
-  attributes: [
-    { label: "Technical Knowledge", value: "Beginner" },
-    { label: "Patience Level", value: "Low" },
-    { label: "Communication Style", value: "Direct" },
-    { label: "Age Range", value: "30-50" },
-  ],
-  versions: [
-    {
-      version: 2,
-      date: "2023-10-15",
-      author: "Jane Smith",
-    },
-    {
-      version: 1,
-      date: "2023-09-30",
-      author: "John Doe",
-    },
-  ],
-  goals: [
-    "Resolve Wi-Fi connectivity issues",
-    "Troubleshoot printer not working",
-    "Request help with software installation",
-  ],
-};
+import { useParams } from "react-router-dom";
+import { personas } from "./personas-mock";
 
 const PersonasView: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
+  const persona = personas.find((p) => p.id === Number(id));
+
   const [tab, setTab] = useState<"details" | "versions" | "goals">("details");
+
+  if (!persona) {
+    return (
+      <div className="p-8 bg-slate-50 min-h-screen">
+        <h1 className="text-2xl font-semibold">Persona Not Found</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="p-8 bg-slate-50 min-h-screen">
@@ -88,7 +71,7 @@ const PersonasView: React.FC = () => {
             <>
               <div className="mb-2">
                 <span className="text-xs font-semibold px-2 py-1 bg-green-100 text-green-700 rounded mr-2">
-                  Version 2
+                  Version {persona.versions[0].version}
                 </span>
               </div>
               <div className="mb-4 text-slate-700">{persona.description}</div>
@@ -115,7 +98,7 @@ const PersonasView: React.FC = () => {
                   <div>
                     <div className="font-medium">
                       Version {v.version}
-                      {v.version === 2 && (
+                      {v.version === persona.versions[0].version && (
                         <span className="ml-2 text-xs px-2 py-0.5 bg-violet-100 text-violet-700 rounded">
                           Latest
                         </span>

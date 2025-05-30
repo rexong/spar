@@ -1,43 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
-const personas = [
-  {
-    name: "Technical Support Seeker",
-    description: "A user seeking technical support for computer issues",
-    versions: 2,
-    goals: 3,
-    date: "2023-10-15",
-  },
-  {
-    name: "E-commerce Shopper",
-    description: "A user looking to purchase products online",
-    versions: 2,
-    goals: 3,
-    date: "2023-10-15",
-  },
-  {
-    name: "Travel Planner",
-    description: "A user planning a vacation and booking travel arrangements",
-    versions: 2,
-    goals: 3,
-    date: "2023-10-15",
-  },
-  {
-    name: "Healthcare Inquirer",
-    description: "A user seeking medical advice or information",
-    versions: 2,
-    goals: 3,
-    date: "2023-10-15",
-  },
-  {
-    name: "Financial Advisor Seeker",
-    description: "A user looking for financial planning advice",
-    versions: 2,
-    goals: 3,
-    date: "2023-10-15",
-  },
-];
+import { personas } from "./personas-mock";
 
 const PersonasList: React.FC = () => {
   const navigate = useNavigate();
@@ -64,21 +27,21 @@ const PersonasList: React.FC = () => {
       <div className="bg-white rounded-xl shadow-sm">
         {personas.map((persona, idx) => (
           <div
-            key={persona.name}
+            key={persona.id}
             className={`flex items-center justify-between px-6 py-5 ${
               idx !== personas.length - 1 ? "border-b border-slate-100" : ""
             }`}
           >
-            <div>
-              <div className="font-medium text-violet-700 hover:underline cursor-pointer">
-                {persona.name}
-              </div>
-              <div className="text-slate-500 text-sm">{persona.description}</div>
+            <div
+              className="font-medium text-violet-700 hover:underline cursor-pointer"
+              onClick={() => navigate(`/personas/${persona.id}`)}
+            >
+              {persona.name}
             </div>
             <div className="flex items-center gap-6 text-slate-500 text-sm">
-              <span>{persona.versions} versions</span>
+              <span>{persona.versions.length} versions</span>
               <span>•</span>
-              <span>{persona.goals} goals</span>
+              <span>{persona.goals.length} goals</span>
               <span>•</span>
               <span>{persona.date}</span>
               <span className="text-xl text-slate-300">{'>'}</span>
