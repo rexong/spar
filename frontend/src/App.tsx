@@ -1,9 +1,15 @@
+import Navbar from "./components/Navbar";
+import Dashboard from "./pages/landing";
+
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello World
-    </h1>
-  )
+    <div className="flex">
+      <Navbar />
+      <div className="flex-1 ml-64">
+        <Dashboard />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
