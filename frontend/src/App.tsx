@@ -17,6 +17,10 @@ import EvaluatorsList from "./pages/evaluators/evaluators-list";
 import EvaluatorsCreate from "./pages/evaluators/evaluators-create";
 import EvaluatorsEdit from "./pages/evaluators/evaluators-edit";
 import EvaluatorsView from "./pages/evaluators/evaluators-view";
+import ConversationsList from "./pages/conversations/conversations-list";
+import ConversationsDetails from "./pages/conversations/conversations-details";
+import ConversationsGenerate from "./pages/conversations/conversations-generate";
+import ConversationsUpload from "./pages/conversations/conversations-upload";
 
 function App() {
   return (
@@ -42,6 +46,10 @@ function App() {
             <Route path="/evaluators/create" element={<EvaluatorsCreate />} />
             <Route path="/evaluators/edit/:id" element={<EvaluatorsEdit />} />
             <Route path="/evaluators/:id" element={<EvaluatorsView />} />
+            <Route path="/conversations" element={<ConversationsList />} />
+            <Route path="/conversations/generate" element={<ConversationsGenerate />} />
+            <Route path="/conversations/upload" element={<ConversationsUpload />} />
+            <Route path="/conversations/:id" element={<ConversationsDetails />} />
           </Routes>
         </div>
       </div>
