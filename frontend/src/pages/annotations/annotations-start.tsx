@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { annotationDetail } from "./annotations-mock";
 
-const AnnotationsStart: React.FC = () => {
+const AnnotationsStart = () => {
   const navigate = useNavigate();
   const [metric, setMetric] = useState(annotationDetail.metric);
 

@@ -1,29 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Dashboard from "./pages/landing";
-import PersonasList from "./pages/personas/personas-list";
-import PersonaCreate from "./pages/personas/personas-create";
-import PersonaEdit from "./pages/personas/personas-edit";
-import PersonasView from "./pages/personas/personas-view";
-import GoalsList from "./pages/goals/goals-list";
-import GoalsCreate from "./pages/goals/goals-create";
-import GoalsEdit from "./pages/goals/goals-edit";
-import GoalsView from "./pages/goals/goals-view";
-import MetricsList from "./pages/metrics/metrics-list";
-import MetricsCreate from "./pages/metrics/metrics-create";
-import MetricsEdit from "./pages/metrics/metrics-edit";
-import MetricsView from "./pages/metrics/metrics-view";
-import EvaluatorsList from "./pages/evaluators/evaluators-list";
-import EvaluatorsCreate from "./pages/evaluators/evaluators-create";
-import EvaluatorsEdit from "./pages/evaluators/evaluators-edit";
-import EvaluatorsView from "./pages/evaluators/evaluators-view";
-import ConversationsList from "./pages/conversations/conversations-list";
-import ConversationsDetails from "./pages/conversations/conversations-details";
-import ConversationsGenerate from "./pages/conversations/conversations-generate";
-import ConversationsUpload from "./pages/conversations/conversations-upload";
-import AnnotationsList from "./pages/annotations/annotations-list";
-import AnnotationsStart from "./pages/annotations/annotations-start";
-import AnnotationsCreate from "./pages/annotations/annotations-create";
+import { PersonasList, PersonasCreate, PersonasEdit, PersonasView } from "./pages/personas";
+import { GoalsList, GoalsCreate, GoalsEdit, GoalsView } from "./pages/goals";
+import { MetricsList, MetricsCreate, MetricsEdit, MetricsView } from "./pages/metrics";
+import { EvaluatorsList, EvaluatorsCreate, EvaluatorsEdit, EvaluatorsView } from "./pages/evaluators";
+import { ConversationsList, ConversationsDetails, ConversationsGenerate, ConversationsUpload } from "./pages/conversations";
+import { AnnotationsList, AnnotationsCreate, AnnotationsStart  } from "./pages/annotations";
 
 function App() {
   return (
@@ -34,8 +17,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/personas" element={<PersonasList />} />
-            <Route path="/personas/create" element={<PersonaCreate />}/>
-            <Route path="/personas/edit/:id" element={<PersonaEdit />}/>
+            <Route path="/personas/create" element={<PersonasCreate />}/>
+            <Route path="/personas/edit/:id" element={<PersonasEdit />}/>
             <Route path="personas/:id" element={<PersonasView />}/>
             <Route path="/goals" element={<GoalsList />} />
             <Route path="/goals/create" element={<GoalsCreate />} />

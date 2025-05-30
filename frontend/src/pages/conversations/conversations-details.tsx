@@ -1,7 +1,6 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ConversationsDetails: React.FC = () => {
+const ConversationsDetails = () => {
   const navigate = useNavigate();
   return (
     <div className="p-8 max-w-3xl mx-auto">

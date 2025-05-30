@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { personas } from "./personas-mock";
 
-const PersonasView: React.FC = () => {
+const PersonasView = () => {
   const { id } = useParams<{ id: string }>();
   const persona = personas.find((p) => p.id === Number(id));
 

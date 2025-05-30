@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { goals } from "./goals-mock";
 
-const GoalsView: React.FC = () => {
+const GoalsView = () => {
   const { id } = useParams<{ id: string }>();
   const goal = goals.find((g) => g.id === Number(id));
   const [tab, setTab] = useState<"details" | "versions">("details");

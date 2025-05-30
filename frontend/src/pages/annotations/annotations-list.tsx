@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { annotations } from "./annotations-mock";
 
@@ -9,7 +8,7 @@ const statusIcon = (status: string) =>
     <span className="text-red-500 mr-2">✖</span>
   );
 
-const AnnotationsList: React.FC = () => {
+const AnnotationsList = () => {
   const navigate = useNavigate();
 
   return (

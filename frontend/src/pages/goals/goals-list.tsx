@@ -1,8 +1,7 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { goals } from "./goals-mock";
 
-const GoalsList: React.FC = () => {
+const GoalsList = () => {
   const navigate = useNavigate();
 
   return (

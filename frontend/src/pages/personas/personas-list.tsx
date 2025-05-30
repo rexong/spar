@@ -1,8 +1,7 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { personas } from "./personas-mock";
 
-const PersonasList: React.FC = () => {
+const PersonasList = () => {
   const navigate = useNavigate();
 
   return (

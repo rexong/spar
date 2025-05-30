@@ -1,8 +1,7 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { annotationDetail } from "./annotations-mock";
 
-const AnnotationsCreate: React.FC = () => {
+const AnnotationsCreate = () => {
   const navigate = useNavigate();
 
   return (

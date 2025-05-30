@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { conversations } from "./conversations-mock"; 
 
@@ -10,7 +9,7 @@ const statusIcon = (status: string) => {
   return <span className="text-gray-300 mr-2">●</span>;
 };
 
-const ConversationsList: React.FC = () => {
+const ConversationsList = () => {
   const navigate = useNavigate();
 
   return (

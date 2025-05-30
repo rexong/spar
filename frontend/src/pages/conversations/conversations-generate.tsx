@@ -1,7 +1,6 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const ConversationsGenerate: React.FC = () => {
+const ConversationsGenerate = () => {
   const navigate = useNavigate();
 
   return (
