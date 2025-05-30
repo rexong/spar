@@ -7,7 +7,7 @@ const navItems = [
   { label: "Goals", icon: "🎯", path: "/goals" },
   { label: "Conversations", icon: "💬", path: "/conversations" },
   { label: "Metrics", icon: "📈", path: "/metrics" },
-  { label: "Annotations", icon: "📝", path: "#" },
+  { label: "Annotations", icon: "📝", path: "/annotations" },
   { label: "Evaluators", icon: "🤖", path: "/evaluators" },
   { label: "Results", icon: "📊", path: "#" },
 ];

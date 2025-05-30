@@ -21,6 +21,9 @@ import ConversationsList from "./pages/conversations/conversations-list";
 import ConversationsDetails from "./pages/conversations/conversations-details";
 import ConversationsGenerate from "./pages/conversations/conversations-generate";
 import ConversationsUpload from "./pages/conversations/conversations-upload";
+import AnnotationsList from "./pages/annotations/annotations-list";
+import AnnotationsStart from "./pages/annotations/annotations-start";
+import AnnotationsCreate from "./pages/annotations/annotations-create";
 
 function App() {
   return (
@@ -50,6 +53,9 @@ function App() {
             <Route path="/conversations/generate" element={<ConversationsGenerate />} />
             <Route path="/conversations/upload" element={<ConversationsUpload />} />
             <Route path="/conversations/:id" element={<ConversationsDetails />} />
+            <Route path="/annotations" element={<AnnotationsList />} />
+            <Route path="/annotations/start" element={<AnnotationsStart />} />
+            <Route path="/annotations/create" element={<AnnotationsCreate />} />
           </Routes>
         </div>
       </div>
