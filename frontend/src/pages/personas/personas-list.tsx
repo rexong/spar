@@ -38,7 +38,7 @@ const personas = [
   },
 ];
 
-const Personas: React.FC = () => (
+const PersonasList: React.FC = () => (
   <div className="p-8 bg-slate-50 min-h-screen">
     <div className="flex items-center justify-between mb-6">
       <h1 className="text-2xl font-semibold">Personas</h1>
@@ -82,4 +82,4 @@ const Personas: React.FC = () => (
   </div>
 );
 
-export default Personas;
+export default PersonasList;
