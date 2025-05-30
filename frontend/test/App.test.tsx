@@ -1,36 +1,23 @@
+import React from 'react';
 import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import App from '../src/App';
 import '@testing-library/jest-dom';
+import App from '../src/App';
 
 describe('App Routing', () => {
   it('renders Navbar on all routes', () => {
-    const { getByRole } = render(
-      <MemoryRouter initialEntries={['/']}>
-        <App />
-      </MemoryRouter>
-    );
+    const { getByRole } = render(<App />);
     expect(getByRole('navigation')).toBeInTheDocument();
   });
 
   it('renders Dashboard at root route', () => {
-    const { getByTestId } = render(
-      <MemoryRouter initialEntries={['/']}>
-        <App />
-      </MemoryRouter>
-    );
-    // Add data-testid="dashboard" to your Dashboard component for this to work
+    const { getByTestId } = render(<App />);
     expect(getByTestId('dashboard')).toBeInTheDocument();
   });
 
   it('renders PersonasList at /personas', () => {
-    const { getByTestId } = render(
-      <MemoryRouter initialEntries={['/personas']}>
-        <App />
-      </MemoryRouter>
-    );
-    // Add data-testid="personas-list" to your PersonasList component for this to work
+    window.history.pushState({}, '', '/personas');
+    const { getByTestId } = render(<App />);
     expect(getByTestId('personas-list')).toBeInTheDocument();
   });
 });

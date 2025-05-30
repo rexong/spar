@@ -6,7 +6,7 @@ const PersonasList: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="p-8 bg-slate-50 min-h-screen">
+    <div className="p-8 bg-slate-50 min-h-screen" data-testid="personas-list">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Personas</h1>
         <button
