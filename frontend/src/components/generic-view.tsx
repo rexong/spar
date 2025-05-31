@@ -34,7 +34,7 @@ function GenericView<T>({
     );
   }
 
-  // @ts-ignore
+  // @ts-expect-error: Assuming entity has an 'id' property
   const entityId = entity.id;
 
   return (
