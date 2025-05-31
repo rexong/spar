@@ -55,7 +55,7 @@ const EvaluatorsView = () => {
                         </span>
                       )}
                     </div>
-                    <div className="text-slate-500 text-sm">
+                    <div className="text-slate-500 text-sm" data-testid={`version-info-${v.version}`}>
                       Created on {v.date} by {v.author}
                     </div>
                   </div>
