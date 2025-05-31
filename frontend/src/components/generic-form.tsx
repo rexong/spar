@@ -37,8 +37,11 @@ const GenericForm: React.FC<GenericFormProps> = ({
       <p className="text-slate-500 mb-8">{subtitle}</p>
       <div className="bg-white rounded-xl shadow-sm p-8 max-w-3xl">
         <div className="mb-6">
-          <label className="block font-medium mb-2">{nameLabel}</label>
+          <label className="block font-medium mb-2" htmlFor="generic-form-name">
+            {nameLabel}
+          </label>
           <input
+            id="generic-form-name"
             className="w-full px-4 py-2 rounded-lg border border-slate-200 bg-slate-100 focus:outline-none focus:ring-2 focus:ring-violet-200"
             placeholder={namePlaceholder}
             value={name}
@@ -47,8 +50,11 @@ const GenericForm: React.FC<GenericFormProps> = ({
           />
         </div>
         <div className="mb-8">
-          <label className="block font-medium mb-2">{descLabel}</label>
+          <label className="block font-medium mb-2" htmlFor="generic-form-desc">
+            {descLabel}
+          </label>
           <textarea
+            id="generic-form-desc"
             className="w-full px-4 py-2 rounded-lg border border-slate-200 bg-slate-100 focus:outline-none focus:ring-2 focus:ring-violet-200 min-h-[120px]"
             placeholder={descPlaceholder}
             value={desc}

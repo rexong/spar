@@ -9,7 +9,7 @@ const navItems = [
   { label: "Metrics", icon: "📈", path: "/metrics" },
   { label: "Annotations", icon: "📝", path: "/annotations" },
   { label: "Evaluators", icon: "🤖", path: "/evaluators" },
-  { label: "Results", icon: "📊", path: "#" },
+  { label: "Results", icon: "📊", path: "/results" },
 ];
 
 const Navbar: React.FC = () => {
