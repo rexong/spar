@@ -1,6 +1,6 @@
 export const personas = [
   {
-    id: 1,
+    id: "1",
     name: "Technical Support Seeker",
     description: "A user seeking technical support for computer issues. They typically have limited technical knowledge and are looking for clear, step-by-step guidance to resolve their problems.",
     attributes: [
@@ -21,7 +21,7 @@ export const personas = [
     date: "2023-10-15",
   },
   {
-    id: 2,
+    id: "2",
     name: "E-commerce Shopper",
     description: "A user looking to purchase products online. They value convenience and security in transactions.",
     attributes: [
@@ -42,7 +42,7 @@ export const personas = [
     date: "2023-10-15",
   },
   {
-    id: 3,
+    id: "3",
     name: "Travel Planner",
     description: "A user planning a vacation and booking travel arrangements. They seek recommendations and easy booking processes.",
     attributes: [
@@ -63,7 +63,7 @@ export const personas = [
     date: "2023-10-15",
   },
   {
-    id: 4,
+    id: "4",
     name: "Healthcare Inquirer",
     description: "A user seeking medical advice or information. They value privacy and clear, reliable information.",
     attributes: [
@@ -84,7 +84,7 @@ export const personas = [
     date: "2023-10-15",
   },
   {
-    id: 5,
+    id: "5",
     name: "Financial Advisor Seeker",
     description: "A user looking for financial planning advice. They want trustworthy and easy-to-understand guidance.",
     attributes: [
